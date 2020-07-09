@@ -1,2 +1,2 @@
 # t-bot
-장터 알리미
+keyboard lab 장터 새글 알리미

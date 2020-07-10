@@ -56,7 +56,8 @@ while True:
         before = f_read.read()
 #      print('before : ' + before)
         if before != latest:
-            bot.sendMessage(chat_id=chat_id, text='새 글이 올라왔어요 ' + latest)
+            if '키캡' in latest or '아티산' in latest:
+                bot.sendMessage(chat_id=chat_id, text='새 글이 올라왔어요 ' + latest)
 #        else: # just check 
 #           bot.sendMessage(chat_id=chat_id, text='새 글이 없어요 ㅠㅠ')
         f_read.close()

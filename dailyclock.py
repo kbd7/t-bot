@@ -26,14 +26,12 @@ with requests.Session() as s:
         soup = BeautifulSoup(html, 'html.parser')
 
         posts = soup.select('#AddToCartText-product-template')
-        print(posts)
-        print(posts[0].text)
+        #print(posts[0].text)
 
         if 'Sold Out' in posts[0].text:
-            print('Okay')
-            bot.sendMessage(chat_id=chat_id, text='Sold out ' + MARKET_URL)
+            print('Sold Out')
+            #bot.sendMessage(chat_id=chat_id, text='Sold out ' + MARKET_URL)
         else:
-            #print('Fail')
-            #Just Check
-            #bot.sendMessage(chat_id=chat_id, text='수량이 들어왔습니다. ' + MARKET_URL)
+            print('Instock')
+            bot.sendMessage(chat_id=chat_id, text='수량이 들어왔습니다. ' + MARKET_URL)
         time.sleep(10) # 초 단위 현재 10초 

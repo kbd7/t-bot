@@ -12,7 +12,7 @@ my_token = ''
 bot = telegram.Bot(token = my_token)
 chat_id = bot.getUpdates()[-1].message.chat.id
 
-# URL & INFO
+# 원하는 상품 URL
 MARKET_URL = 'https://dailyclack.com/products/gmk-dracc?_pos=1&_sid=82a43f244&_ss=r'
 
 # Session 생성, with 구문 안에서 유지
